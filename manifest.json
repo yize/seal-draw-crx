@@ -1,0 +1,30 @@
+{
+    "name"            : "seal-draw",
+    "version"         : "1.0",
+    "description"     : "seal-draw",
+    "background"      : {
+        "scripts": ["background.js"]
+    },
+    "permissions"     : [
+        "notifications"
+    ],
+    "page_action"     : {
+        "default_icon" : "sandwich-128.png",
+        "default_title": "seal-draw"
+    },
+    "content_scripts" : [
+        {
+            "matches"   : [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js"        : ["contentscript.js"],
+            "all_frames": false
+        }
+    ],
+    "icons"           : {
+        "48" : "sandwich-48.png",
+        "128": "sandwich-128.png"
+    },
+    "manifest_version": 2
+}
